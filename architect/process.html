@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Process | DBA Architects</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Additional styles specific to the process page */
+      .process-detail-page {
+        padding: 80px 5%;
+        max-width: 1100px; /* Widen the content area */
+        margin: 0 auto;
+      }
+      .process-detail-page h1 {
+        text-align: center;
+        margin-bottom: 60px;
+        font-size: 3rem;
+      }
+      .process-detail-item img {
+        width: 48%; /* Adjust image width */
+        border-radius: 8px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+      }
+      .process-detail-item {
+        margin-bottom: 50px;
+      }
+      .process-detail-item h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 10px;
+      }
+      .process-detail-item ul {
+        list-style-position: inside;
+        padding-left: 10px;
+      }
+      .process-detail-item li {
+        margin-bottom: 10px;
+        color: #555;
+      }
+      .process-detail-item {
+        display: flex;
+        align-items: center;
+        gap: 4%;
+        margin-bottom: 100px; /* Increase vertical spacing slightly */
+      }
+      .process-detail-item:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      .process-detail-content {
+        width: 48%; /* Adjust content width */
+        background-color: #f9f9f9; /* Add a subtle background */
+        padding: 30px; /* Add padding */
+        border-radius: 8px; /* Match image border-radius */
+      }
+      @media (max-width: 768px) {
+        .process-detail-item,
+        .process-detail-item:nth-child(even) {
+          flex-direction: column;
+        }
+        .process-detail-item img,
+        .process-detail-content {
+          width: 100%;
+        }
+        .process-detail-content {
+          padding: 25px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar" style="width: 90%; max-width: 1200px; margin: 0 auto">
+        <div class="logo">Archi</div>
+        <ul class="menu">
+          <li>
+            <a href="index.html" style="text-decoration: none; color: inherit"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="ourwork.html" style="text-decoration: none; color: inherit"
+              >our Work</a
+            >
+          </li>
+          <li>
+            <a href="process.html" style="text-decoration: none; color: inherit"
+              >Process</a
+            >
+          </li>
+          <li>
+            <a href="contact.html" style="text-decoration: none; color: inherit"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <main class="process-detail-page">
+        <h1 class="reveal-up">From Vision to Reality</h1>
+
+        <div class="process-detail-item">
+          <img
+            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80"
+            alt="Architects reviewing blueprints on a construction site"
+            class="reveal-left"
+          />
+          <div class="process-detail-content reveal-right">
+            <h2>01. Consultation & Floor Plan</h2>
+            <ul>
+              <li>
+                In-depth discussion to understand your goals, lifestyle, and
+                budget.
+              </li>
+              <li>Site analysis to evaluate opportunities and constraints.</li>
+              <li>Development of initial floor plans and spatial layouts.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="process-detail-item">
+          <img
+            src="images/design.png"
+            alt="A 3D architectural rendering of a modern house on a computer screen"
+            class="reveal-right"
+          />
+          <div class="process-detail-content reveal-left">
+            <h2>02. Schematic Design & Visualization</h2>
+            <ul>
+              <li>Creation of detailed architectural drawings.</li>
+              <li>Development of 3D models and photorealistic renderings.</li>
+              <li>Selection of preliminary materials and finishes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="process-detail-item">
+          <img
+            src="images/review.png"
+            alt="A client and architect reviewing design swatches and materials"
+            class="reveal-left"
+          />
+          <div class="process-detail-content reveal-right">
+            <h2>03. Review & Refinement</h2>
+            <ul>
+              <li>Collaborative review sessions to gather your feedback.</li>
+              <li>
+                Refinement of designs to align with your vision and budget.
+              </li>
+              <li>
+                Finalization of construction documents and specifications.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="process-detail-item">
+          <img
+            src="images/handover.png"
+            alt="A happy couple receiving the keys to their new modern home"
+            class="reveal-right"
+          />
+          <div class="process-detail-content reveal-left">
+            <h2>04. Construction & Handover</h2>
+            <ul>
+              <li>
+                Overseeing the construction phase to ensure quality standards.
+              </li>
+              <li>Regular site visits and progress reports.</li>
+              <li>Final inspection and handover of your completed project.</li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+    <!-- GSAP and Plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+    <!-- Custom Script for this page -->
+    <script src="process.js"></script>
+  </body>
+</html>
