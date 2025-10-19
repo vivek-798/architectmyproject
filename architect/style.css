@@ -67,6 +67,20 @@ body {
   color: #888;
 }
 
+/* --- Hamburger Menu --- */
+.hamburger {
+  display: none; /* Hidden by default on desktop */
+  cursor: pointer;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
 /* --- Hero Content --- */
 .content {
   display: flex;
@@ -124,6 +138,55 @@ h1 {
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    width: 70%;
+    height: 100vh;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  .menu.active {
+    right: 0; /* Slide in */
+  }
+
+  .menu li {
+    font-size: 1.2rem;
+  }
+
+  .hamburger {
+    display: block; /* Show on mobile */
+    z-index: 101; /* Ensure it's above the menu */
+  }
+
+  /* Animate hamburger to an 'X' */
+  .hamburger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+  }
+
+  .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+  }
+
+  /* Adjust hero content for mobile */
+  .hero {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 60px;
+  }
+
   .content {
     flex-direction: column;
     text-align: center;
@@ -472,5 +535,48 @@ h1 {
 @media (max-width: 900px) {
   .contact-wrapper {
     flex-direction: column;
+  }
+}
+
+/* --- Footer --- */
+.site-footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 40px 5%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-content p {
+  margin: 0;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.social-links a {
+  color: #ccc;
+  font-size: 1.4rem;
+  margin-left: 20px;
+  transition: color 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* Needed for transform */
+}
+
+.social-links a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    justify-content: center;
   }
 }
